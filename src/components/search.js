@@ -4,12 +4,13 @@ angular.module('video-player')
   // TODO
   
   bindings: {
-    searchVids: '<'
+    cb: '<',
+    context: '<'
   },
-  controller: function () {
-    this.search = () => {
-      youTube.getData(this.query);
-    };
+  controller: function (youTube) {
+    this.search = _.debounce(function(q, cb) {
+      youTube.search(q, cb); 
+    }, 750);
   },
   templateUrl: '/src/templates/search.html'
 });

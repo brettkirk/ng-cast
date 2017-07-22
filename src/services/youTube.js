@@ -14,7 +14,6 @@ angular.module('video-player')
         videoEmbeddable: true
       }
     }).then(function (data) {
-      console.log(cb);
       cb(data.data.items);
     }, function (data) {
       console.log(data);

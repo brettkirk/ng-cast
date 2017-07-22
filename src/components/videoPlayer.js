@@ -7,8 +7,8 @@ angular.module('video-player')
   },
   
   controller: function () {
-    // console.log(this.currentVideo);
   },
+  
   templateUrl: '/src/templates/videoPlayer.html'
   
 });
