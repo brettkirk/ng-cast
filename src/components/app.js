@@ -17,7 +17,7 @@ angular.module('video-player')
       context.currentVideo = vids[0];
     };
     
-    youTube.search("Where's Waldo audiobook", this.cb);
+    youTube.search('Where\'s Waldo audiobook', this.cb);
   },
   templateUrl: '/src/templates/app.html'
 });
